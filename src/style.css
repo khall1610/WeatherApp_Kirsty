@@ -1,0 +1,149 @@
+body {
+  background-color: rgb(41, 41, 41);
+}
+
+.app-top {
+  background-color: #add1cf;
+  padding: 30px;
+  border-radius: 25px 25px 0px 0px;
+  text-shadow: 2px 2px 10px#7aaaa9;
+  color: #fcfcfc;
+  font-family: Helvetica, sans-serif;
+}
+
+.app-bottom {
+  background-color: #fcfcfc;
+  padding: 30px;
+}
+
+.app {
+  background-color: #fcfcfc;
+  max-width: 600px;
+  margin: 45px auto;
+  padding: 0px;
+  box-shadow: 0px 15px 25px rgba(167, 221, 219, 0.269);
+  border-radius: 25px;
+}
+.search-form {
+  display: block;
+  background-color: #add1cf;
+  color: #fcfcfc;
+  margin: 0px auto;
+}
+
+.search-form-input {
+  background-color: #7aaaa9;
+  border-color: #fcfcfc;
+  color: #fcfcfc;
+  font-family: Helvetica;
+  font-size: 15px;
+  box-shadow: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.search-form-input::placeholder {
+  color: #fcfcfc;
+}
+
+.search-form-button {
+  background-color: #7aaaa9;
+  border-color: #fcfcfc;
+  color: #fcfcfc;
+  font-family: Helvetica;
+  font-size: 15px;
+  box-shadow: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+footer {
+  padding: 30px;
+}
+
+h1 {
+  font-size: 75px;
+  text-align: center;
+  margin: 20px 0px 10px 0px;
+}
+
+h2 {
+  font-weight: 100;
+  font-size: 30px;
+  text-align: center;
+  margin: 0px 0px 7px 0px;
+}
+
+h3 {
+  font-weight: 100;
+  font-size: 20px;
+  text-align: center;
+  margin: 0px;
+}
+
+h4 {
+  font-family: Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  margin: 0px 0px 8px 0px;
+  color: #406b69;
+}
+
+p {
+  text-align: center;
+  font-size: 20px;
+}
+
+li {
+  margin: 15px 0px;
+  position: absolute;
+}
+
+.forecast-box {
+  border-radius: 20px;
+}
+
+.day-type-a {
+  font-family: Helvetica, sans-serif;
+  list-style-type: none;
+  margin: 0px;
+  padding: 15px 15px;
+  font-size: 18px;
+  color: #406b69;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.day-type-b {
+  font-family: Helvetica, sans-serif;
+  color: #406b69;
+  list-style-type: none;
+  margin: 0px;
+  padding: 15px 15px;
+  font-size: 18px;
+  background-color: #fcfcfc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forecast-day {
+  text-align: left;
+  font-weight: 500;
+  margin: 10px;
+}
+
+.forecast-descriptor {
+  text-align: right;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  left: 30%;
+}
+
+.forecast-icon {
+  text-align: right;
+  font-size: 25px;
+}
