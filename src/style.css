@@ -29,6 +29,7 @@ body {
   background-color: #add1cf;
   color: #fcfcfc;
   margin: 0px auto;
+  align-items: flex-end;
 }
 
 .search-form-input {
@@ -38,7 +39,7 @@ body {
   font-family: Helvetica;
   font-size: 15px;
   box-shadow: none;
-  border-radius: 10px;
+  border-radius: 13px;
   padding: 5px 10px;
 }
 
@@ -53,7 +54,7 @@ body {
   font-family: Helvetica;
   font-size: 15px;
   box-shadow: none;
-  border-radius: 10px;
+  border-radius: 13px;
   padding: 5px 10px;
 }
 
@@ -146,4 +147,10 @@ li {
 .forecast-icon {
   text-align: right;
   font-size: 25px;
+}
+
+footer {
+  font-family: Helvetica, sans-serif;
+  color: #add1cf;
+  text-align: center;
 }
