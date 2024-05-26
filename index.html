@@ -23,51 +23,42 @@
             </header>
                 <main>
                     <div>
-                        <h1 id="current-time">00:00</h1>
-                        <h2 id="city"></h2>
-                        <h3 id="current-description">Cloudy</h3>
-                        <span class="current-temp-total">🌤️
-                         <span class="current-temp-total" id="current-temp"></span>°C
+                        <div class = "time-day-container">
+                            <h1
+                                id="time" 
+                                class="time">
+                            </h1>
+                            </div>
+                            <h1
+                                id="day" 
+                                class="day">
+                            </h1>
+                        <h2
+                             id="city">
+                        </h2>
+                    <div class = "weather-container">
+                        <div class = "temperature-total">
+                        <span class="icon" id="icon">🌤️</span>
+                         <span class="current-temp" id="current-temp"></span><span class="unit">°C</span>
                         </span>
                     </div>
-                    <div>
-                        <p>Humitidy: xx%, Wind x.xxkm/m</p>
+                        <h3 id="description">Cloudy</h3>
+                    <div class="details">
+                        <p> Humidity:
+                       <strong><span 
+                        id="humidity"
+                        class="special">
+                    </span></strong> ,
+                        Wind:
+                        <strong><span 
+                            id="wind-speed"
+                            class="special">
+                        </span></strong>
+                        </p>
+                    </div>
                     </div>
         </div>
-                    <div class="app-bottom">
-                        <h4>Forecast</h4>
-                        <div class="forecast-box">
-                                <div class="day-type-a">
-                                    <div class="forecast-day">Day</div>
-                                    <div class="forecast-descriptor"><strong>00°C</strong> <br />Cloudy</div>
-                                    <span class="forecast-icon">⛅</span>
-                                </div>
-
-                                <div class="day-type-b">
-                                    <div class="forecast-day">Day</div>
-                                    <div class="forecast-descriptor"><strong>00°C</strong> <br />Cloudy</div>
-                                    <span class="forecast-icon">⛅</span>
-                                </div>
-
-                                <div class="day-type-a">
-                                    <div class="forecast-day">Day</div>
-                                    <div class="forecast-descriptor"><strong>00°C</strong> <br />Cloudy</div>
-                                     <span class="forecast-icon">⛅</span>
-                                </div>
-
-                                <div class="day-type-b">
-                                    <div class="forecast-day">Day</div>
-                                    <div class="forecast-descriptor"><strong>00°C</strong> <br />Cloudy</div>
-                                    <span class="forecast-icon">⛅</span>
-                                </div>
-
-                                <div class="day-type-a">
-                                    <div class="forecast-day">Day</div>
-                                    <div class="forecast-descriptor"><strong>00°C</strong> <br />Cloudy</div>
-                                    <span class="forecast-icon">⛅</span>
-                                </div>
-                            </div>
-                    </div>
+        </div>
                 </main>
             <footer>
         Coded by

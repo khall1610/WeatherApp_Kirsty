@@ -2,9 +2,16 @@ body {
   background-color: rgb(41, 41, 41);
 }
 
+.special {
+  color: #085551;
+}
+.time-date-box {
+  background-color: #406b69;
+}
+
 .app-top {
   background-color: #add1cf;
-  padding: 30px;
+  padding: 20px 0px 0px 0px;
   border-radius: 25px 25px 0px 0px;
   text-shadow: 2px 2px 10px#7aaaa9;
   color: #fcfcfc;
@@ -24,11 +31,24 @@ body {
   box-shadow: 0px 15px 25px rgba(167, 221, 219, 0.269);
   border-radius: 25px;
 }
+
+.day-time-container {
+  padding: 30px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.weather-container {
+  background-color: #7aaaa9;
+  padding: 0px 0px 10px 0px;
+}
+
 .search-form {
-  display: block;
+  display: flex;
+  justify-content: left;
   background-color: #add1cf;
   color: #fcfcfc;
-  margin: 0px auto;
+  padding: 10px 10px 0px 20px;
+
   align-items: flex-end;
 }
 
@@ -41,6 +61,7 @@ body {
   box-shadow: none;
   border-radius: 13px;
   padding: 5px 10px;
+  margin: 0px, 0px, 20px, 0px;
 }
 
 .search-form-input::placeholder {
@@ -56,23 +77,46 @@ body {
   box-shadow: none;
   border-radius: 13px;
   padding: 5px 10px;
+  margin: 0px 0px 0px 5px;
+  transition: all 200ms ease;
+}
+
+.search-form-button:hover {
+  background-color: #406b69;
+  border-color: #fcfcfc;
+  color: #fcfcfc;
+  font-family: Helvetica;
+  font-size: 15px;
+  box-shadow: none;
+  border-radius: 13px;
+  padding: 5px 10px;
+  margin: 0px 0px 0px 5px;
 }
 
 footer {
   padding: 30px;
 }
 
-h1 {
+.time {
   font-size: 75px;
   text-align: center;
-  margin: 20px 0px 10px 0px;
+  padding: 10px 0px 0px 0px;
+  margin: 0px;
+}
+
+.day {
+  font-size: 35px;
+  text-align: center;
+  margin: 10px 0px 20px 0px;
 }
 
 h2 {
   font-weight: 100;
-  font-size: 30px;
+  font-size: 35px;
   text-align: center;
-  margin: 0px 0px 7px 0px;
+  margin: 15px 0px 0px 0px;
+  padding: 5px;
+  background-color: #406b69;
 }
 
 h3 {
@@ -93,15 +137,13 @@ h4 {
 p {
   text-align: center;
   font-size: 20px;
-}
-
-li {
-  margin: 15px 0px;
-  position: absolute;
+  padding: 7px;
+  margin: 0px;
 }
 
 .forecast-box {
   border-radius: 20px;
+  margin: 0px;
 }
 
 .day-type-a {
@@ -151,12 +193,40 @@ li {
 
 footer {
   font-family: Helvetica, sans-serif;
-  color: #add1cf;
+  color: #406b69;
   text-align: center;
 }
 
-.current-temp-total {
+a:link {
+  color: #95f1ef;
+}
+
+a:visited {
+  color: #7aaaa9;
+}
+
+.current-temp {
+  display: flex;
+  justify-content: left;
   font-size: 75px;
-  text-align: center;
-  margin: 0px auto;
+  text-align: left;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px#7aaaa9;
+}
+
+.temperature-total {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px 0px 0px;
+}
+
+.day {
+  font-size: 25px;
+  margin: 0px;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.unit {
+  font-size: 28px;
 }
