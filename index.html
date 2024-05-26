@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -24,9 +24,11 @@
                 <main>
                     <div>
                         <h1 id="current-time">00:00</h1>
-                        <h2 id="city">City Name</h2>
+                        <h2 id="city"></h2>
                         <h3 id="current-description">Cloudy</h3>
-                        <h1 class="current-temp">🌤️XX°C</h1>
+                        <span class="current-temp-total">🌤️
+                         <span class="current-temp-total" id="current-temp"></span>°C
+                        </span>
                     </div>
                     <div>
                         <p>Humitidy: xx%, Wind x.xxkm/m</p>

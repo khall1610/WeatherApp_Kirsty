@@ -154,3 +154,9 @@ footer {
   color: #add1cf;
   text-align: center;
 }
+
+.current-temp-total {
+  font-size: 75px;
+  text-align: center;
+  margin: 0px auto;
+}
