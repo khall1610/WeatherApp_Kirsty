@@ -62,6 +62,28 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Tue", "Wed", " Thu", "Fri", "Sat"];
+  let forecastHtml = " ";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+        <div class="forecast">
+                            <div class="forecast-day">${day}</div>
+                            <div class="forecast-icon">⛅</div>
+                            <div class="forecast-descriptor">Cloudy</div>
+                            <div class="forecast-temp" id="high-forecast"><strong>00°C</strong></div>
+                            <div class="forecast-temp" id="low-forecast">00°C</span>
+                        </div>
+                        `;
+  });
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
@@ -72,14 +94,4 @@ function titleCase(str) {
 }
 
 searchCity("Bath");
-
-let forecast = document.querySelector("#forecast");
-
-forecast.innerHtml = `
-         <div class="day-type-a">
-                <div class="forecast-day">Day</div>
-                 <div class="forecast-temp"><strong>00°C</strong></div>
-                 <div class="forecast-descriptor"><br />Cloudy</div>
-                 <span class="forecast-icon">⛅</span>
-               </div>
-                `;
+displayForecast();

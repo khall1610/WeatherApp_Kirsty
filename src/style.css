@@ -142,21 +142,13 @@ p {
   margin: 0px;
 }
 
-.forecast-box {
-  border-radius: 20px;
-  margin: 0px;
-}
-
 .forecast {
   font-family: Helvetica, sans-serif;
-  list-style-type: none;
-  margin: 0px;
-  padding: 5px 15px 8px 15px;
+  margin: 10px 0px 0px 5px;
+  padding: 3px 0px 0px 0px;
   font-size: 18px;
   color: #406b69;
   background-color: aliceblue;
-  align-items: center;
-  max-width: 20%;
 }
 
 .forecast-temp {
@@ -167,6 +159,8 @@ p {
   text-align: center;
   font-weight: 500;
   margin: 0px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
 }
 
 .forecast-descriptor {
