@@ -20,7 +20,8 @@ body {
 
 .app-bottom {
   background-color: #fcfcfc;
-  padding: 30px;
+  padding: 30px 10px 10px 30px;
+  border-radius: 20px;
 }
 
 .app {
@@ -146,55 +147,48 @@ p {
   margin: 0px;
 }
 
-.day-type-a {
+.forecast {
   font-family: Helvetica, sans-serif;
   list-style-type: none;
   margin: 0px;
-  padding: 15px 15px;
+  padding: 5px 15px 8px 15px;
   font-size: 18px;
   color: #406b69;
   background-color: aliceblue;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  max-width: 20%;
 }
 
-.day-type-b {
-  font-family: Helvetica, sans-serif;
-  color: #406b69;
-  list-style-type: none;
-  margin: 0px;
-  padding: 15px 15px;
-  font-size: 18px;
-  background-color: #fcfcfc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.forecast-temp {
+  text-align: center;
 }
 
 .forecast-day {
-  text-align: left;
+  text-align: center;
   font-weight: 500;
-  margin: 10px;
+  margin: 0px 0px 0px 0px;
 }
 
 .forecast-descriptor {
-  text-align: right;
-  margin: 0px;
+  text-align: center;
+  margin: 0px 0px 7px 0px;
   padding: 0px;
-  position: relative;
-  left: 30%;
+  font-weight: 100;
+  font-style: italic;
+  font-size: 15px;
 }
 
 .forecast-icon {
-  text-align: right;
+  text-align: center;
   font-size: 25px;
+  margin: 0px 0px 8px 0px;
 }
 
 footer {
   font-family: Helvetica, sans-serif;
   color: #406b69;
   text-align: center;
+  border-radius: 20px;
 }
 
 a:link {

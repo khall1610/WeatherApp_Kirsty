@@ -72,3 +72,14 @@ function titleCase(str) {
 }
 
 searchCity("Bath");
+
+let forecast = document.querySelector("#forecast");
+
+forecast.innerHtml = `
+         <div class="day-type-a">
+                <div class="forecast-day">Day</div>
+                 <div class="forecast-temp"><strong>00°C</strong></div>
+                 <div class="forecast-descriptor"><br />Cloudy</div>
+                 <span class="forecast-icon">⛅</span>
+               </div>
+                `;
