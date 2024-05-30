@@ -19,6 +19,8 @@ function refreshWeather(response) {
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   iconElement.innerHTML =
     iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+
+  getForecast(response.data.city);
 }
 
 function formatTime(date) {
@@ -50,6 +52,13 @@ function formatDay(date) {
   return `${formattedDay}`;
 }
 
+function formatForecastDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"];
+
+  return days[date.getDay()];
+}
+
 function searchCity(city) {
   let apiKey = "cfd74d4742a02oe0341423faf5c9a0bt";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
@@ -62,25 +71,36 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
+function getForecast(city) {
+  let apiKey = `cfd74d4742a02oe0341423faf5c9a0bt`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
 
-  let days = ["Tue", "Wed", " Thu", "Fri", "Sat"];
+function displayForecast(response) {
   let forecastHtml = " ";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
-        <div class="forecast">
-                            <div class="forecast-day">${day}</div>
-                            <div class="forecast-icon">⛅</div>
-                            <div class="forecast-descriptor">Cloudy</div>
-                            <div class="forecast-temp" id="high-forecast"><strong>00°C</strong></div>
-                            <div class="forecast-temp" id="low-forecast">00°C</span>
-                        </div>
-                        `;
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `
+        <div class="forecast-column">
+            <div class="forecast-day">${formatForecastDay(day.time)}</div>
+            <img src = "${day.condition.icon_url}" class="forecast-icon" />
+
+            <div class="forecast-temp" id="high-forecast"><strong>${Math.round(
+              day.temperature.maximum
+            )}°C</strong></div>
+            <div class="forecast-temp" id="low-forecast">${Math.round(
+              day.temperature.minimum
+            )}°C</div>
+        </div>
+      `;
+    }
   });
+
+  let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
 
@@ -94,4 +114,3 @@ function titleCase(str) {
 }
 
 searchCity("Bath");
-displayForecast();
