@@ -1,5 +1,6 @@
 body {
   background-color: rgb(41, 41, 41);
+  padding: 0px;
 }
 
 .special {
@@ -12,6 +13,17 @@ body {
 .details {
   position: relative;
   left: -15px;
+}
+
+.app {
+  min-width: 650px;
+}
+
+@media (max-with: 600px) {
+  . app {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .app-top {
